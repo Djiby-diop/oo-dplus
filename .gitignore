@@ -1,0 +1,6 @@
+target/
+*.fd
+qemu-fs/EFI/
+qemu-fs/NvVars
+qemu-fs/WEIGHTS.BIN
+*.log
