@@ -1,8 +1,11 @@
 # oo-dplus — D+ Policy Engine for the Operating Organism
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+> **Couche 5 — Evolution Layer** | [oo-system architecture](https://github.com/Djiby-diop/oo-system)
 
-**oo-dplus** is the decision and policy engine of the [Operating Organism](https://github.com/Djiby-diop/llm-baremetal).
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![oo-dplus CI](https://github.com/Djiby-diop/oo-dplus/actions/workflows/oo-dplus-ci.yml/badge.svg)](https://github.com/Djiby-diop/oo-dplus/actions/workflows/oo-dplus-ci.yml)
+
+**oo-dplus** is the decision and policy engine of the [Operating Organism](https://github.com/Djiby-diop/oo-system).
 
 Every action in the OO passes through D+. It is the **ethical core** — not a firewall, but a judge.
 
