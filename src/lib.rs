@@ -8,6 +8,7 @@ pub mod policy_vm;
 pub mod resonance;
 pub mod sentinel;
 pub mod soma;
+pub mod soma_gate;
 pub mod types;
 pub mod warden;
 
@@ -17,6 +18,10 @@ pub use warden::{CapMeta, MemError, MemoryWarden, WardenSnapshot};
 pub use journal::{Event, EventKind, Journal, JournalStats};
 
 pub use soma::NeuralSoma;
+
+pub use soma_gate::{
+    evaluate_ward_gate, WardGateReasons, WardGateRequest, WardGateState, WardGateVerdict,
+};
 
 pub use resonance::{ResonanceConfig, ResonanceProfile, ResonanceVerdict};
 
