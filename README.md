@@ -1,6 +1,6 @@
 # oo-dplus — D+ Policy Engine for the Operating Organism
 
-> **Couche 5 — Evolution Layer** | [oo-system architecture](https://github.com/Djiby-diop/oo-system)
+> **Layer 5 — Evolution Layer** | [oo-system architecture](https://github.com/Djiby-diop/oo-system)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![oo-dplus CI](https://github.com/Djiby-diop/oo-dplus/actions/workflows/oo-dplus-ci.yml/badge.svg)](https://github.com/Djiby-diop/oo-dplus/actions/workflows/oo-dplus-ci.yml)
@@ -47,6 +47,28 @@ oo-dplus/
 | QUARANTINE | Isolate |
 | FORBID | Block |
 | EMERGENCY | Full stop |
+
+## Quick host-side checks
+
+On Windows/host development, the fastest path is to use the `std` feature for
+the CLI tools:
+
+```bash
+cargo test
+cargo run --features std --bin dplus_check -- policy-strict.dplus
+cargo run --features std --bin dplus_judge -- policy-strict.dplus
+pwsh ./test-smoke.ps1
+pwsh ./test-smoke.ps1 -Configuration release
+```
+
+Notes:
+
+- `policy-strict.dplus` is the positive smoke path and should pass `dplus_check`.
+- `policy.dplus` is intentionally useful as a negative verifier case because it
+	lacks matching proof entries for strict law/proof validation.
+- `test-smoke.ps1` accepts `-Configuration debug|release`, `-SkipBuild`,
+	`-PositivePolicy`, and `-NegativePolicy` so the same script can validate
+	custom policy files without editing the repo script.
 
 ## Related
 
