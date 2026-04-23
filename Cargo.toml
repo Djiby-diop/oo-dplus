@@ -40,6 +40,11 @@ path = "src/bin/dplus_judge.rs"
 required-features = ["std"]
 
 [[bin]]
+name = "dplus_event_judge"
+path = "src/bin/dplus_event_judge.rs"
+required-features = ["std"]
+
+[[bin]]
 name = "dplus_heal"
 path = "src/bin/dplus_heal.rs"
 required-features = ["std"]

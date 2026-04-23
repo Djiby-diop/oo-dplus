@@ -57,6 +57,8 @@ the CLI tools:
 cargo test
 cargo run --features std --bin dplus_check -- policy-strict.dplus
 cargo run --features std --bin dplus_judge -- policy-strict.dplus
+cargo run --features std --bin dplus_event_judge -- event.json
+cargo run --features std --bin dplus_event_judge -- --replay events.jsonl
 pwsh ./test-smoke.ps1
 pwsh ./test-smoke.ps1 -Configuration release
 ```
@@ -66,6 +68,8 @@ Notes:
 - `policy-strict.dplus` is the positive smoke path and should pass `dplus_check`.
 - `policy.dplus` is intentionally useful as a negative verifier case because it
 	lacks matching proof entries for strict law/proof validation.
+- `dplus_event_judge` evaluates projected OO contract events and supports
+  deterministic replay summaries (`--replay`) for quick audit checks.
 - `test-smoke.ps1` accepts `-Configuration debug|release`, `-SkipBuild`,
 	`-PositivePolicy`, and `-NegativePolicy` so the same script can validate
 	custom policy files without editing the repo script.
